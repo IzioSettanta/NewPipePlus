@@ -19,7 +19,8 @@ dependencyResolutionManagement {
         maven(url = "https://repo.clojars.org")
     }
 }
-include (":app")
+include(":app")
+include(":api")
 
 // Use a local copy of NewPipe Extractor by uncommenting the lines below.
 // We assume, that NewPipe and NewPipe Extractor have the same parent directory.

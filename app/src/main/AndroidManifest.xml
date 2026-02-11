@@ -59,6 +59,15 @@
             </intent-filter>
         </receiver>
 
+        <!-- BroadcastReceiver per richieste di ricerca da app esterne -->
+        <receiver
+            android:name=".external.SearchReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.schabi.newpipe.SEARCH_REQUEST" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
             android:enabled="false"
@@ -107,6 +116,11 @@
         <service
             android:name=".local.feed.service.FeedLoadService"
             android:foregroundServiceType="dataSync" />
+
+        <!-- Servizio per gestire richieste di ricerca da app esterne -->
+        <service
+            android:name=".external.SearchService"
+            android:exported="true" />
 
         <service
             android:name="androidx.work.impl.foreground.SystemForegroundService"
@@ -161,6 +175,12 @@
             android:name=".error.ReCaptchaActivity"
             android:exported="false"
             android:label="@string/recaptcha" />
+
+        <!-- Activity di test per l'API esterna -->
+        <activity
+            android:name=".external.TestSearchActivity"
+            android:exported="true"
+            android:label="NewPipe API Test" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

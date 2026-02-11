@@ -5,14 +5,14 @@
 
 [versions]
 acra = "5.13.1"
-agp = "8.13.2"
+agp = "9.0.0"
 appcompat = "1.7.1"
 assertj = "3.27.6"
 autoservice-google = "1.1.1"
 autoservice-zacsweers = "1.2.0"
 bridge = "v2.0.2"
 cardview = "1.0.0"
-checkstyle = "13.0.0"
+checkstyle = "10.12.5"
 constraintlayout = "2.2.1"
 core = "1.17.0"
 desugar = "2.1.5"
